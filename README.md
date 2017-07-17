@@ -13,8 +13,8 @@ npm run dev
 npm run build
 
 # Main Technology
-客户端：vue2.0、vuex
-服务端：nodejs、express
-数据库：mongodb
-通讯：socket.io
-ui框架：muse-ui
+客户端：vue2.0、vuex<br>
+服务端：nodejs、express<br>
+数据库：mongodb<br>
+通讯：socket.io<br>
+UI框架：muse-ui<br>
