@@ -3,7 +3,7 @@
 
 # Build Setup
 
-#install dependencies
+#install dependencies<br>
 npm install
 
 #serve with hot reload at localhost:8080
