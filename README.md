@@ -3,6 +3,9 @@
 
 # Build Setup
 
+>#### # install mongoose<br>
+    npm install mongoose --save
+
 >#### # install dependencies<br>
     npm install
 
