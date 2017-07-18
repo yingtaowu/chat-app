@@ -38,25 +38,29 @@
         methods: {
             sendmessage() {
                 var info = this.msg;
-                var name = this.getusername
-                var data = {
-                    'info': info,
-                    'name': name
+                if (info) {
+                    var name = this.getusername
+                    var data = {
+                        'info': info,
+                        'name': name
+                    }
+                    this.$store.commit('setrobotmsg', {
+                        message: info,
+                        user: this.getusername
+                    })
+                    this.$store.dispatch('getrobatmess', data)
+                    this.msg = ''
+                    setTimeout(() => this.contentArea.scrollTop = this.contentArea.scrollHeight, 0);
+                } else {
+                    return;
                 }
-                this.$store.commit('setrobotmsg', {
-                    message: info,
-                    user: this.getusername
-                })
-                this.$store.dispatch('getrobatmess', data)
-                this.msg = ''
-                setTimeout(() => this.contentArea.scrollTop = this.contentArea.scrollHeight, 0);
             }
         },
         computed: {
             ...mapGetters([
                 'getusername',
-                'getrobotmsg',
-                'getusersrc'
+            'getrobotmsg',
+            'getusersrc'
             ])
         },
         components: {

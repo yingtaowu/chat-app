@@ -16,15 +16,19 @@
 
 <style lang="scss">
     @import "../../static/style/msg.scss";
+
     .self {
+        padding-right: 50px !important;
         .msg-from {
             justify-content: flex-end;
             .head-img {
-                margin-left: 10px;
+                right: 5px;
             }
         }
         .msg-content {
             float: right;
+            border-top-right-radius: 0 !important;
+            margin-top: 15px !important;
         }
     }
 </style>

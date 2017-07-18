@@ -38,7 +38,7 @@
       Online
     },
     created: function () {
-      this.$store.commit('setgetsocket', io.connect('localhost:8080/'));
+      this.$store.commit('setgetsocket', io.connect('localhost:8080/')); //连接当前的服务
       this.$router.push('/')
     }
   }

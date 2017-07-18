@@ -63,7 +63,6 @@
         mounted() {
             const that = this
             this.getsocket.on('message', function (obj) {
-                console.log("----------",obj)
                 that.$store.commit('addgroupdetailinfos', obj)
                 window.scrollTo(0, 900000)
             })
@@ -82,17 +81,11 @@
             },
             addEmoji(str) {
                 const inputArea = this.$refs.textarea;
-
-                if (typeof inputArea.selectionStart === 'number' && typeof inputArea.selectionEnd === 'number') {
-                    let startPos = inputArea.selectionStart;
-                    let endPos = inputArea.selectionEnd;
-                    let cursorPos = startPos;
-                    let tempVal = inputArea.value;
-                    this.inputText = tempVal.substring(0, startPos) + str + tempVal.substring(startPos, tempVal.length)
-                    cursorPos += str.length;
-                    inputArea.selectionStart = inputArea.selectionEnd = cursorPos;
-                }
-
+                //selectionStart输入性元素selection起点的位置，selectionEnd输入性元素selection结束点的位置
+                let startPos = inputArea.selectionStart;
+                let endPos = inputArea.selectionEnd;
+                let tempVal = inputArea.value;
+                this.inputText = tempVal.substring(0, startPos) + str + tempVal.substring(startPos, tempVal.length)
             },
             send() {
                 if (this.inputText === '') {
@@ -150,7 +143,7 @@
                         }
                         that.getsocket.emit('message', obj)
                     }
-                    fr.readAsDataURL(imgData) 
+                    fr.readAsDataURL(imgData)
                     //调用FileReader对象的方法(readAsDataURL将文件读取为DataURL),该方法将文件读取为一段以 data: 开头的字符串，
                     //这段字符串的实质就是 Data URL，Data URL是一种将小文件直接嵌入文档的方案。这里的小文件通常是指图像与 html 等格式的文件。
                 }
@@ -219,7 +212,7 @@
                     flex-wrap: wrap;
                     li {
                         padding: 4px;
-                        font-size: 2.5rem;
+                        font-size: 1.5rem;
                     }
                 }
             }

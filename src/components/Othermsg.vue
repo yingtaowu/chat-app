@@ -18,18 +18,19 @@
 <style lang="scss">
     @import "../../static/style/msg.scss";
     .other {
+        padding-left: 50px !important;
         .msg-author {
             font-size: 1rem;
-            padding-left: 5px;
         }
         .msg-from {
             justify-content: flex-start;
             .head-img {
-                margin-right: 10px;
+                left: 5px;
             }
         }
         .msg-content {
             float: left;
+            border-top-left-radius: 0 !important;
         }
     }
 </style>
