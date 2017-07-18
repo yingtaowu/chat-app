@@ -3,11 +3,11 @@
 
 # Build Setup
 
->#### # install mongoose<br>
-    npm install mongoose --save
-
 >#### # install dependencies<br>
     npm install
+    
+>#### # install mongoose<br>
+    npm install mongoose --save
 
 >#### # serve with hot reload at localhost:8080<br>
     npm run dev
