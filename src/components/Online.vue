@@ -45,8 +45,8 @@
             margin: 15px 10px;
             text-align: center;
             img {
-                width: 40px;
-                height: 40px;
+                width: 55px;
+                height: 55px;
             }
         }
     }

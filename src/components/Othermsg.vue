@@ -19,7 +19,7 @@
     @import "../../static/style/msg.scss";
     .other {
         .msg-author {
-            font-size: 1.5rem;
+            font-size: 1rem;
             padding-left: 5px;
         }
         .msg-from {

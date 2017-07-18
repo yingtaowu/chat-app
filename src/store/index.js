@@ -23,7 +23,7 @@ const store = new Vuex.Store({
         // 存放历史记录
         msghistory: [],
         robotmsg: [{
-            message: 'Hi~有什么需要帮忙的吗？',
+            message: 'Hi，有什么问题随时问我哦？',
             user: '小公仔'
         }],
         chattoggle: false,

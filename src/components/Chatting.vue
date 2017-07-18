@@ -230,7 +230,6 @@
                 padding-top: 9px;
                 padding-right: 3px;
                 height: 100%;
-                font-size: 1.4rem;
             }
             button {
                 width: 60px;

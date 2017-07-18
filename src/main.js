@@ -6,7 +6,7 @@ import App from './App'
 import router from './router'
 import MuseUI from 'muse-ui'
 import 'muse-ui/dist/muse-ui.css'
-import 'muse-ui/dist/theme-teal.css'//muse-ui 预设 4 种主题 light, dark, carbon, teal 只需要在组件后面引入即可
+import 'muse-ui/dist/theme-teal.css'//muse-ui 预设 4 种主题 light(蓝色), dark, carbon(炭黑), teal(蓝绿色) 只需要在组件后面引入即可
 // import VueSocketio from 'vue-socket.io'
 import moment from 'moment'
 import axios from 'axios'

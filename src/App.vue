@@ -6,7 +6,7 @@
     <div class="bottom" v-show="$route.meta.showTab">
       <mu-paper>
         <mu-bottom-nav :value="$route.name">
-          <mu-bottom-nav-item value="index" title="首页" icon="chat" to="/index" />
+          <mu-bottom-nav-item value="index" title="聊天室" icon="chat" to="/index" />
           <mu-bottom-nav-item value="robot" title="机器人" icon="face" to="/robot" />
           <mu-bottom-nav-item value="mycenter" title="我" icon="person" to="/mycenter" />
         </mu-bottom-nav>
