@@ -3,7 +3,7 @@
         <div class="msg-author">{{name}}</div>
         <div class="msg-from">
             <img class="head-img" :src="src" />
-            <div class="msg-content"><img :src="img" class="img">{{msg}}</div>
+            <div class="msg-content"><img v-if="img" :src="img" class="img">{{msg}}</div>
         </div>
     </div>
 </template>

@@ -165,20 +165,19 @@ module.exports = function (app) {
               errno: 1
             })
           } else {
-            var mess = {
-              username: fields.username,
-              src: fields.src,
-              img: dstPath,
-              roomid: fields.roomid
-            }
-            var message = new Message(mess)
-            message.save(function (err, mess) {
-              if (err) {
-                console.log(err)
-              }
-              console.log(mess)
-            })
-
+            // var mess = {
+            //   username: fields.username,
+            //   src: fields.src,
+            //   img: dstPath,
+            //   roomid: fields.roomid
+            // }
+            // var message = new Message(mess)
+            // message.save(function (err, mess) {
+            //   if (err) {
+            //     console.log(err)
+            //   }
+            //   console.log(mess)
+            // })
             res.json({
               errno: 0
             })

@@ -131,6 +131,7 @@
                     formdata.append('username', that.getusername)
                     formdata.append('src', that.getusersrc)
                     formdata.append('roomid', that.getuserroom)
+                    console.log("formdata--",formdata);
                     this.$store.dispatch('uploadimg', formdata)
                     var fr = new window.FileReader() //HTML5定义了FileReader作为文件API的重要成员用于读取文件，根据W3C的定义，FileReader接口提供了读取文件的方法和包含读取结果的事件模型。
                     fr.onload = function () {

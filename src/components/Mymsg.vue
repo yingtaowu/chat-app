@@ -1,7 +1,7 @@
 <template>
     <div class="chatting-item self clearfix">
         <div class="msg-from">
-            <div class="msg-content"><img :src="img" class="img">{{msg}}</div>
+            <div class="msg-content"><img v-if="img" :src="img" class="img">{{msg}}</div>
             <img class="head-img" :src="src" />
         </div>
     </div>

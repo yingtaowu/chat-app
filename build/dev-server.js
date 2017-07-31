@@ -117,7 +117,7 @@ var Message = require('../models/message')
 global.users = {}
 
 io.on('connection', function (socket) {
-  
+
   socket.on('enterChat', function (obj) { //用于监听用户进入聊天室
     console.log("-----enter----------");
     socket.name = obj.name
@@ -132,7 +132,7 @@ io.on('connection', function (socket) {
     console.log(obj.name + '加入了' + obj.roomid)
   })
 
-  
+
   socket.on('message', function (obj) { //监听用户发布聊天内容
     var mess = {
       username: obj.username,
@@ -141,21 +141,18 @@ io.on('connection', function (socket) {
       img: obj.img,
       roomid: obj.room
     }
-   
+
     io.to(mess.roomid).emit('message', mess)  //向所有客户端广播发布的消息
     console.log(obj.username + '对房' + mess.roomid + '说：' + mess.msg)
-    if (obj.img === '') {
-      var message = new Message(mess)
-      message.save(function (err, mess) { //将发送过来的消息进行储存
-        if (err) {
-          console.log(err)
-        }
-        console.log(mess)
-      })
-    }
+    var message = new Message(mess)
+    message.save(function (err, mess) { //将发送过来的消息进行储存
+      if (err) {
+        console.log(err)
+      }
+    })
   })
 
-  
+
   socket.on('logout', function (obj) { //用于监听用户退出聊天室
     console.log("global.users--", global.users);
     delete global.users[obj.roomid][obj.name]

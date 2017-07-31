@@ -75,7 +75,7 @@ const store = new Vuex.Store({
             state.chatdetails.infos.push(data)
         },
         setrobotmsg(state, data) {
-            state.robotmsg.push(data)
+            data == 'clean' ? state.robotmsg = [state.robotmsg[0]] : state.robotmsg.push(data)
         },
         changechattoggle(state) {
             state.chattoggle = !state.chattoggle
@@ -108,6 +108,7 @@ const store = new Vuex.Store({
                     console.log("data--", data);
                     if (data.data.errno === 0) {
                         vueRouter.push('index');
+                         commit('setrobotmsg', 'clean')
                         commit('changedialog')
                         commit('changedialoginfo', data.data.data)
                         commit('setusername', data.data.name)
